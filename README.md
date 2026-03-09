@@ -11,17 +11,14 @@
 ## Nome do grupo
 
 ## 👨‍🎓 Integrantes: 
-- <a href="https://www.linkedin.com/company/inova-fusca">Nome do integrante 1</a>
-- <a href="https://www.linkedin.com/company/inova-fusca">Nome do integrante 2</a>
-- <a href="https://www.linkedin.com/company/inova-fusca">Nome do integrante 3</a> 
-- <a href="https://www.linkedin.com/company/inova-fusca">Nome do integrante 4</a> 
-- <a href="https://www.linkedin.com/company/inova-fusca">Nome do integrante 5</a>
+- <a href="https://www.linkedin.com/company/inova-fusca">Leonardo Nunes Urbano</a>
+- <a href="https://www.linkedin.com/company/inova-fusca">Erick Souza Pereira</a>
 
 ## 👩‍🏫 Professores:
 ### Tutor(a) 
-- <a href="https://www.linkedin.com/company/inova-fusca">Nome do Tutor</a>
+- <a href="https://www.linkedin.com/company/inova-fusca">Caique Nonato</a>
 ### Coordenador(a)
-- <a href="https://www.linkedin.com/company/inova-fusca">Nome do Coordenador</a>
+- <a href="https://www.linkedin.com/company/inova-fusca">André Godoir</a>
 
 
 ## 📜 Descrição
@@ -54,15 +51,15 @@ Dentre os arquivos e pastas presentes na raiz do projeto, definem-se:
 
 ## 🗃 Histórico de lançamentos
 
-* 0.5.0 - XX/XX/2024
+* 0.5.0 - XX/XX/2026
     * 
-* 0.4.0 - XX/XX/2024
+* 0.4.0 - XX/XX/2026
     * 
-* 0.3.0 - XX/XX/2024
+* 0.3.0 - XX/XX/2026
     * 
-* 0.2.0 - XX/XX/2024
+* 0.2.0 - XX/XX/2026
     * 
-* 0.1.0 - XX/XX/2024
+* 0.1.0 - XX/XX/2026
     *
 
 ## 📋 Licença
