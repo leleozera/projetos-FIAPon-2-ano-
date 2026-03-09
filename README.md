@@ -144,7 +144,9 @@ Este repositório tem **finalidade exclusivamente educacional e acadêmica**.
 
 Os dados organizados aqui **não devem ser utilizados para diagnóstico médico real** ou tomada de decisão clínica sem a análise de profissionais de saúde qualificados.
 
+# 📍 Link para o drive com todos os dados
 
+https://drive.google.com/drive/folders/1kd8_Z7fELt_WUbQwXAKCnRjzhNy6mxAZ?usp=sharing
 
 ## 🗃 Histórico de lançamentos
 
