@@ -21,32 +21,129 @@
 - <a href="https://www.linkedin.com/company/inova-fusca">André Godoir</a>
 
 
-## 📜 Descrição
+# 📊 Projeto de Organização de Dados sobre Doenças Cardíacas
 
-*Descreva seu projeto com base no texto do PBL (até 600 palavras)*
+Este projeto tem como objetivo estruturar e organizar diferentes tipos de dados relacionados às **doenças cardiovasculares**, reunindo informações em três formatos distintos: **dados tabulares**, **textos científicos/educacionais** e **imagens médicas**.  
 
+A proposta é demonstrar como diferentes tipos de dados podem ser coletados, organizados e preparados para uso em aplicações de **ciência de dados, inteligência artificial, análise médica e estudos em saúde pública**.
 
-## 📁 Estrutura de pastas
+O repositório foi organizado em três partes principais, cada uma representando um tipo de dado frequentemente utilizado em projetos de análise de dados em saúde.
 
-Dentre os arquivos e pastas presentes na raiz do projeto, definem-se:
+---
 
-- <b>.github</b>: Nesta pasta ficarão os arquivos de configuração específicos do GitHub que ajudam a gerenciar e automatizar processos no repositório.
+# 📁 Estrutura do Projeto
 
-- <b>assets</b>: aqui estão os arquivos relacionados a elementos não-estruturados deste repositório, como imagens.
+## 1️⃣ Dataset Tabular de Saúde Cardiovascular
 
-- <b>config</b>: Posicione aqui arquivos de configuração que são usados para definir parâmetros e ajustes do projeto.
+A primeira parte do projeto consiste em um **dataset estruturado** contendo informações clínicas e demográficas relacionadas a doenças cardíacas.
 
-- <b>document</b>: aqui estão todos os documentos do projeto que as atividades poderão pedir. Na subpasta "other", adicione documentos complementares e menos importantes.
+Esse tipo de conjunto de dados é amplamente utilizado em pesquisas médicas e em projetos de **machine learning**, pois permite identificar padrões e fatores de risco associados a problemas cardiovasculares.
 
-- <b>scripts</b>: Posicione aqui scripts auxiliares para tarefas específicas do seu projeto. Exemplo: deploy, migrações de banco de dados, backups.
+O dataset contém variáveis relacionadas ao estado de saúde dos pacientes, incluindo:
 
-- <b>src</b>: Todo o código fonte criado para o desenvolvimento do projeto ao longo das 7 fases.
+- idade  
+- sexo  
+- pressão arterial  
+- nível de colesterol  
+- histórico de doenças cardíacas  
+- sintomas relatados  
+- frequência cardíaca  
+- entre outras possíveis variáveis clínicas
 
-- <b>README.md</b>: arquivo que serve como guia e explicação geral sobre o projeto (o mesmo que você está lendo agora).
+Essas informações permitem realizar diferentes tipos de análise, como:
 
-## 🔧 Como executar o código
+- identificação de fatores de risco
+- classificação de pacientes
+- previsão de possíveis doenças cardíacas
+- estudos estatísticos sobre saúde cardiovascular
 
-*Acrescentar as informações necessárias sobre pré-requisitos (IDEs, serviços, bibliotecas etc.) e instalação básica do projeto, descrevendo eventuais versões utilizadas. Colocar um passo a passo de como o leitor pode baixar o seu código e executá-lo a partir de sua máquina ou seu repositório. Considere a explicação organizada em fase.*
+Esse tipo de base de dados é frequentemente utilizado em pesquisas de **ciência de dados aplicada à medicina**.
+
+---
+
+## 2️⃣ Textos sobre Saúde Cardiovascular
+
+A segunda parte do projeto reúne **arquivos de texto (.txt)** contendo materiais relacionados a:
+
+- doenças cardíacas  
+- saúde pública  
+- sintomas cardiovasculares  
+- tratamentos e prevenção  
+- pesquisas médicas sobre o tema
+
+Esses textos podem ser utilizados em diversos contextos, como:
+
+- análise de linguagem natural (NLP)  
+- mineração de texto  
+- extração de informações médicas  
+- estudos acadêmicos  
+- treinamento de modelos de inteligência artificial voltados para textos da área da saúde  
+
+Os arquivos foram obtidos a partir de **fontes públicas e confiáveis**, como:
+
+- **SciELO (Scientific Electronic Library Online)**  
+- **BVS – Biblioteca Virtual em Saúde**  
+- **publicações do SUS (Sistema Único de Saúde)**  
+- **Projeto Gutenberg**, quando aplicável a literatura relacionada à saúde ou medicina
+
+A escolha dessas fontes garante que os textos tenham **credibilidade científica ou relevância educacional**.
+
+---
+
+## 3️⃣ Conjunto de Imagens de Exames Cardiológicos
+
+A terceira parte do projeto consiste em um **conjunto de imagens médicas** relacionadas a exames utilizados na análise do sistema cardiovascular.
+
+O conjunto contém **no mínimo 100 imagens** em formato `.jpg` ou `.png`, representando um tipo específico de exame cardiológico, como por exemplo:
+
+- eletrocardiogramas (ECG)  
+- angiogramas  
+- radiografias de tórax (raio-X)  
+- outros exames utilizados na cardiologia
+
+Essas imagens podem ser utilizadas para estudos em:
+
+- visão computacional  
+- reconhecimento de padrões em exames médicos  
+- treinamento de modelos de inteligência artificial para diagnóstico assistido  
+- análise de imagens médicas
+
+Esse tipo de base visual é importante para pesquisas em **IA aplicada à medicina**, especialmente em tarefas como classificação ou detecção de anomalias em exames.
+
+---
+
+# 🎯 Objetivos do Projeto
+
+Os principais objetivos deste projeto são:
+
+- Demonstrar a organização de **diferentes tipos de dados (estruturados, textuais e visuais)** em um único repositório.
+- Criar uma base inicial que possa ser utilizada em **projetos de ciência de dados e inteligência artificial na área da saúde**.
+- Facilitar estudos e experimentos envolvendo **machine learning, processamento de linguagem natural e visão computacional**.
+- Promover o uso de **dados abertos e fontes confiáveis de informação médica**.
+
+---
+
+# 📚 Fontes de Dados
+
+Os materiais utilizados neste projeto foram obtidos a partir de **fontes públicas e abertas**, incluindo:
+
+- SciELO – Scientific Electronic Library Online  
+- BVS – Biblioteca Virtual em Saúde  
+- Publicações e materiais educacionais do SUS  
+- Projeto Gutenberg  
+- Repositórios públicos de imagens médicas  
+- Bases de dados abertas utilizadas em estudos sobre doenças cardiovasculares
+
+Todas as fontes utilizadas priorizam **conteúdo educacional, científico ou de acesso público**.
+
+---
+
+# ⚠️ Aviso Importante
+
+Este repositório tem **finalidade exclusivamente educacional e acadêmica**.  
+
+Os dados organizados aqui **não devem ser utilizados para diagnóstico médico real** ou tomada de decisão clínica sem a análise de profissionais de saúde qualificados.
+
 
 
 ## 🗃 Histórico de lançamentos
