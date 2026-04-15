@@ -34,7 +34,7 @@ O repositório foi organizado em três partes principais, cada uma representando
 # 📁 Estrutura do Projeto
 
 - <b>Parte 1</b>: Todo o código para a parte 1 do projeto
-- <b>Parte 2</b>: Todo o código fonte criado para o desenvolvimento do projeto ao longo das 7 fases.
+- <b>Parte 2</b>: Todo o código para a parte 2 do projeto
 - <b>README.md</b>: arquivo que serve como guia e explicação geral sobre o projeto
 
 # 🎯 Objetivos do Projeto
