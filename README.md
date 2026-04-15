@@ -48,6 +48,7 @@ Para isso, montamos uma base de dados simulada com 40 frases médicas rotuladas 
 - Bibliotecas: `pandas`, `scikit-learn`, `matplotlib`, `seaborn`
 
 Fase 1: Faça upload do notebook Cap1_Desafio_Integrador.ipynb no Colab junto com os arquivos frasesintomas.txt e mapa_sintomas_doencas.csv, e execute todas as células.
+
 Fase 2: Faça upload do notebook classificador_risco_clinico.ipynb junto com a frases_medicas.csv no Colab, e execute todas as células. 
 
 ---
