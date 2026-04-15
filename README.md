@@ -33,84 +33,9 @@ O repositório foi organizado em três partes principais, cada uma representando
 
 # 📁 Estrutura do Projeto
 
-## 1️⃣ Dataset Tabular de Saúde Cardiovascular
-
-A primeira parte do projeto consiste em um **dataset estruturado** contendo informações clínicas e demográficas relacionadas a doenças cardíacas.
-
-Esse tipo de conjunto de dados é amplamente utilizado em pesquisas médicas e em projetos de **machine learning**, pois permite identificar padrões e fatores de risco associados a problemas cardiovasculares.
-
-O dataset contém variáveis relacionadas ao estado de saúde dos pacientes, incluindo:
-
-- idade  
-- sexo  
-- pressão arterial  
-- nível de colesterol  
-- histórico de doenças cardíacas  
-- sintomas relatados  
-- frequência cardíaca  
-- entre outras possíveis variáveis clínicas
-
-Essas informações permitem realizar diferentes tipos de análise, como:
-
-- identificação de fatores de risco
-- classificação de pacientes
-- previsão de possíveis doenças cardíacas
-- estudos estatísticos sobre saúde cardiovascular
-
-Esse tipo de base de dados é frequentemente utilizado em pesquisas de **ciência de dados aplicada à medicina**.
-
----
-
-## 2️⃣ Textos sobre Saúde Cardiovascular
-
-A segunda parte do projeto reúne **arquivos de texto (.txt)** contendo materiais relacionados a:
-
-- doenças cardíacas  
-- saúde pública  
-- sintomas cardiovasculares  
-- tratamentos e prevenção  
-- pesquisas médicas sobre o tema
-
-Esses textos podem ser utilizados em diversos contextos, como:
-
-- análise de linguagem natural (NLP)  
-- mineração de texto  
-- extração de informações médicas  
-- estudos acadêmicos  
-- treinamento de modelos de inteligência artificial voltados para textos da área da saúde  
-
-Os arquivos foram obtidos a partir de **fontes públicas e confiáveis**, como:
-
-- **SciELO (Scientific Electronic Library Online)**  
-- **BVS – Biblioteca Virtual em Saúde**  
-- **publicações do SUS (Sistema Único de Saúde)**  
-- **Projeto Gutenberg**, quando aplicável a literatura relacionada à saúde ou medicina
-
-A escolha dessas fontes garante que os textos tenham **credibilidade científica ou relevância educacional**.
-
----
-
-## 3️⃣ Conjunto de Imagens de Exames Cardiológicos
-
-A terceira parte do projeto consiste em um **conjunto de imagens médicas** relacionadas a exames utilizados na análise do sistema cardiovascular.
-
-O conjunto contém **no mínimo 100 imagens** em formato `.jpg` ou `.png`, representando um tipo específico de exame cardiológico, como por exemplo:
-
-- eletrocardiogramas (ECG)  
-- angiogramas  
-- radiografias de tórax (raio-X)  
-- outros exames utilizados na cardiologia
-
-Essas imagens podem ser utilizadas para estudos em:
-
-- visão computacional  
-- reconhecimento de padrões em exames médicos  
-- treinamento de modelos de inteligência artificial para diagnóstico assistido  
-- análise de imagens médicas
-
-Esse tipo de base visual é importante para pesquisas em **IA aplicada à medicina**, especialmente em tarefas como classificação ou detecção de anomalias em exames.
-
----
+- <b>Parte 1</b>: Todo o código para a parte 1 do projeto
+- <b>Parte 2</b>: Todo o código fonte criado para o desenvolvimento do projeto ao longo das 7 fases.
+- <b>README.md</b>: arquivo que serve como guia e explicação geral sobre o projeto
 
 # 🎯 Objetivos do Projeto
 
@@ -121,20 +46,6 @@ Os principais objetivos deste projeto são:
 - Facilitar estudos e experimentos envolvendo **machine learning, processamento de linguagem natural e visão computacional**.
 - Promover o uso de **dados abertos e fontes confiáveis de informação médica**.
 
----
-
-# 📚 Fontes de Dados
-
-Os materiais utilizados neste projeto foram obtidos a partir de **fontes públicas e abertas**, incluindo:
-
-- SciELO – Scientific Electronic Library Online  
-- BVS – Biblioteca Virtual em Saúde  
-- Publicações e materiais educacionais do SUS  
-- Projeto Gutenberg  
-- Repositórios públicos de imagens médicas  
-- Bases de dados abertas utilizadas em estudos sobre doenças cardiovasculares
-
-Todas as fontes utilizadas priorizam **conteúdo educacional, científico ou de acesso público**.
 
 ---
 
