@@ -46,18 +46,7 @@ Os principais objetivos deste projeto são:
 - Facilitar estudos e experimentos envolvendo **machine learning, processamento de linguagem natural e visão computacional**.
 - Promover o uso de **dados abertos e fontes confiáveis de informação médica**.
 
-
 ---
-
-# ⚠️ Aviso Importante
-
-Este repositório tem **finalidade exclusivamente educacional e acadêmica**.  
-
-Os dados organizados aqui **não devem ser utilizados para diagnóstico médico real** ou tomada de decisão clínica sem a análise de profissionais de saúde qualificados.
-
-# 📍 Link para o drive com todos os dados
-
-https://drive.google.com/drive/folders/1kd8_Z7fELt_WUbQwXAKCnRjzhNy6mxAZ?usp=sharing
 
 ## 🗃 Histórico de lançamentos
 
