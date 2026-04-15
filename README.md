@@ -52,6 +52,10 @@ Fase 2: Faça upload do notebook classificador_risco_clinico.ipynb junto com a f
 
 ---
 
+## 🎥 Vídeo de Demonstração
+
+> 📺 [Link do vídeo no YouTube (não listado)](https://www.youtube.com/watch?v=SEU_LINK_AQUI)
+
 ## 🗃 Histórico de lançamentos
 
 * Parte 1 - 14/04/2026
