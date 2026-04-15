@@ -18,18 +18,20 @@
 ### Tutor(a) 
 - <a href="https://www.linkedin.com/company/inova-fusca">Caique Nonato</a>
 ### Coordenador(a)
-- <a href="https://www.linkedin.com/company/inova-fusca">André Godoir</a>
+- <a href="https://www.linkedin.com/company/inova-fusca">André Godoi</a>
 
 
-# 📊 Projeto de Organização de Dados sobre Doenças Cardíacas
+## 📜 Descrição
 
-Este projeto tem como objetivo estruturar e organizar diferentes tipos de dados relacionados às **doenças cardiovasculares**, reunindo informações em três formatos distintos: **dados tabulares**, **textos científicos/educacionais** e **imagens médicas**.  
+Este projeto foi desenvolvido como parte do desafio integrador da FIAP, com foco na aplicação de Inteligência Artificial na área da saúde. Ao longo de duas fases, exploramos desde a organização e leitura de diferentes tipos de dados médicos até a construção de um classificador automático de risco clínico.
 
-A proposta é demonstrar como diferentes tipos de dados podem ser coletados, organizados e preparados para uso em aplicações de **ciência de dados, inteligência artificial, análise médica e estudos em saúde pública**.
+**Fase 1 — Organização de Dados sobre Doenças Cardiovasculares**
+Na primeira parte, o objetivo foi estruturar e organizar diferentes tipos de dados relacionados a doenças cardiovasculares. Foram trabalhados dados em três formatos distintos: dados tabulares (CSV), textos com relatos de sintomas (TXT) e um mapa de conhecimento relacionando sintomas a possíveis doenças. O notebook carrega 10 frases de pacientes descrevendo seus sintomas e um mapa com 24 associações entre sintomas e doenças como Infarto, Arritmia, Angina e Insuficiência Cardíaca. Essa etapa demonstra como dados heterogêneos podem ser coletados, lidos e preparados para uso em projetos de ciência de dados e inteligência artificial na área da saúde.
 
-O repositório foi organizado em três partes principais, cada uma representando um tipo de dado frequentemente utilizado em projetos de análise de dados em saúde.
+**Fase 2 — Classificador de Risco Clínico com TF-IDF e Machine Learning**
+Na segunda parte, construímos um classificador de texto capaz de analisar frases com descrições de sintomas e classificá-las automaticamente como **alto risco** ou **baixo risco**, simulando o funcionamento de sistemas de triagem clínica automatizada.
+Para isso, montamos uma base de dados simulada com 40 frases médicas rotuladas (20 de alto risco e 20 de baixo risco), aplicamos o método **TF-IDF** para transformar as frases em vetores numéricos, e treinamos dois modelos de classificação: **Logistic Regression** e **Decision Tree**. O desempenho dos modelos foi avaliado com métricas como acurácia, precision, recall e F1-score, além de validação cruzada (cross-validation). O projeto inclui também uma etapa de simulação de triagem com frases novas, exibindo o resultado e o nível de confiança de cada classificação.
 
----
 
 # 📁 Estrutura do Projeto
 
@@ -37,24 +39,26 @@ O repositório foi organizado em três partes principais, cada uma representando
 - <b>Parte 2</b>: Todo o código para a parte 2 do projeto
 - <b>README.md</b>: arquivo que serve como guia e explicação geral sobre o projeto
 
-# 🎯 Objetivos do Projeto
+## 🔧 Como executar o código
 
-Os principais objetivos deste projeto são:
+### Pré-requisitos
 
-- Demonstrar a organização de **diferentes tipos de dados (estruturados, textuais e visuais)** em um único repositório.
-- Criar uma base inicial que possa ser utilizada em **projetos de ciência de dados e inteligência artificial na área da saúde**.
-- Facilitar estudos e experimentos envolvendo **machine learning, processamento de linguagem natural e visão computacional**.
-- Promover o uso de **dados abertos e fontes confiáveis de informação médica**.
+- Conta Google (para uso do Google Colab — gratuito, sem instalação local)
+- Python 3.10+ (caso queira rodar localmente)
+- Bibliotecas: `pandas`, `scikit-learn`, `matplotlib`, `seaborn`
+
+Fase 1: Faça upload do notebook Cap1_Desafio_Integrador.ipynb no Colab junto com os arquivos frasesintomas.txt e mapa_sintomas_doencas.csv, e execute todas as células.
+Fase 2: Faça upload do notebook classificador_risco_clinico.ipynb junto com a frases_medicas.csv no Colab, e execute todas as células. 
 
 ---
 
 ## 🗃 Histórico de lançamentos
 
-* 0.5.0 - XX/XX/2026
+* Parte 1 - 10/04/2026
     * 
-* 0.4.0 - XX/XX/2026
+* Parte 2 - 12/04/2026
     * 
-* 0.3.0 - XX/XX/2026
+* Readme - 14/04/2026
     * 
 * 0.2.0 - XX/XX/2026
     * 
