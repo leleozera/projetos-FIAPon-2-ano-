@@ -54,9 +54,9 @@ Fase 2: Faça upload do notebook classificador_risco_clinico.ipynb junto com a f
 
 ## 🗃 Histórico de lançamentos
 
-* Parte 1 - 10/04/2026
+* Parte 1 - 14/04/2026
     * 
-* Parte 2 - 12/04/2026
+* Parte 2 - 14/04/2026
     * 
 * Readme - 14/04/2026
     * 
