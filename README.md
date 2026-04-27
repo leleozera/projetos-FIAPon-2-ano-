@@ -130,6 +130,7 @@ Exemplos de perguntas:
 
 ## 🏗️ Arquitetura (Diagrama)
 
+<img width="1060" height="695" alt="image" src="https://github.com/user-attachments/assets/dc272e24-4d2d-4e46-87d6-25739494b46e" />
 
 ---
 
