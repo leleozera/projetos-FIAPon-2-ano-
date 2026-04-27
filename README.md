@@ -23,7 +23,7 @@
 
 ## 📜 Descrição
 
-## 🧩 Problema
+🧩 Problema
 
 Os relatórios genéticos fornecidos pelo Genera (Dasa) são entregues em formato PDF com grande volume de informações técnicas, linguagem científica e baixa interatividade.
 
@@ -40,7 +40,7 @@ Dessa forma, há uma lacuna entre a disponibilidade de dados e a capacidade do u
 
 ---
 
-## 💡 Solução
+💡 Solução
 
 Propomos o desenvolvimento de uma plataforma inteligente baseada em Inteligência Artificial capaz de transformar relatórios genéticos em uma experiência interativa, acessível e personalizada.
 
