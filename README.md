@@ -158,8 +158,11 @@ Na próxima sprint, o grupo pretende iniciar o desenvolvimento da solução de f
 As principais atividades serão:
 
 Desenvolver um protótipo funcional com upload de PDF;
+
 Definir melhor o fluxo de interação com a IA;
+
 Criar um protótipo inicial da interface (layout);
+
 Validar as decisões técnicas adotadas na arquitetura.
 
 O objetivo é consolidar a base do projeto antes de avançar para implementações mais completas.
