@@ -6,7 +6,7 @@
 
 <br>
 
-# Nome do projeto
+# Nome do projeto:
 ## DenIA
 
 ## Nome do grupo
