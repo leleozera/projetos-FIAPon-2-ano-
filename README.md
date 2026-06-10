@@ -6,8 +6,7 @@
 
 <br>
 
-# 🌌 Galax IA — Monitoramento Inteligente de Objetos Próximos à Terra
-
+# Galax IA
 ---
 
 ## 👩🏻‍💻 Integrantes
