@@ -41,7 +41,7 @@ A solução integra:
 ## 🗂️ Estrutura do Repositório
 
 ```bash
-📂 global-solutions-galaxia
+📂 global-solutions
 │
 ├── 📂 backend
 │   ├── main.py              # API REST com FastAPI
@@ -51,7 +51,7 @@ A solução integra:
 │   └── requirements.txt     # Dependências Python
 │  
 │
-├── 📂 astrosight-web
+├── 📂 Galax Ia
 │   ├── 📂 src
 │   │   ├── App.jsx           # Componente principal
 │   │   ├── index.css         # Estilos globais
