@@ -1,71 +1,156 @@
 # FIAP - Faculdade de Informática e Administração Paulista
 
 <p align="center">
-<a href= "https://www.fiap.com.br/"><img src="assets/logo-fiap.png" alt="FIAP - Faculdade de Informática e Admnistração Paulista" border="0" width=40% height=40%></a>
+<a href="https://www.fiap.com.br/"><img src="assets/logo-fiap.png" alt="FIAP - Faculdade de Informática e Administração Paulista" border="0" width=40% height=40%></a>
 </p>
 
 <br>
 
-# 🎓 Graduação ON em Inteligência Artificial  
-## 📚 Repositório Oficial de Projetos e Trabalhos Acadêmicos
+# 🌌 Galax IA — Monitoramento Inteligente de Objetos Próximos à Terra
 
 ---
 
-## 👩🏻‍💻 Sobre este Repositório
+## 👩🏻‍💻 Integrantes
 
-Este repositório tem como objetivo centralizar **todos os trabalhos, projetos, desafios, sprints, entregas e experimentos desenvolvidos durante a Graduação ON em Inteligência Artificial da FIAP**.
-
-Aqui está documentada minha evolução técnica, analítica e estratégica ao longo do curso, contemplando:
-
-- Projetos acadêmicos (PBLs, Global Solutions, Challenges)
-- Implementações práticas de IA e Machine Learning
-- Modelagem de dados e engenharia de dados
-- Experimentos com Deep Learning
-- Aplicações com IA Generativa
-- Integrações com IoT e sensores
-- Documentações técnicas completas
-- Arquiteturas de solução
-- Estudos dirigidos e explorações técnicas
-- ...
-
-Este repositório funciona como um **portfólio técnico estruturado**, evidenciando domínio progressivo das competências exigidas na formação.
+| Nome | RM |
+|------|-----|
+| Erick Souza | RM 564996 |
+| Leonardo Nunes | RM 565518 |
 
 ---
 
-## 🎯 Objetivo
+## 📚 Sobre o Projeto
 
-Organizar e versionar todo o fluxo de desenvolvimento acadêmico, garantindo:
+O **Galax IA** é uma aplicação web de monitoramento de objetos próximos à Terra (NEOs — Near-Earth Objects), desenvolvida como solução para o desafio **Global Solutions da FIAP**.
 
-- 📌 Organização e rastreabilidade das entregas
-- 📌 Evolução contínua do conhecimento
-- 📌 Documentação clara e técnica
-- 📌 Reprodutibilidade dos experimentos
-- 📌 Portfólio profissional estruturado
+A solução integra:
+- 📡 Dados em tempo real da **NASA NeoWs API**
+- 🤖 **Machine Learning** com K-Means para clusterização dos objetos
+- 💬 **IA Generativa** com LLaMA 3.3 via Groq, usando o padrão **RAG**
+- 📊 Dashboard interativo com gráficos e tabelas
 
 ---
 
-## 🧠 Estrutura Macro do Repositório
+## 🎯 Problema e Solução
+
+**Problema:** Asteroides e objetos espaciais se aproximam da Terra diariamente, mas as informações disponíveis são técnicas e de difícil acesso para o público geral.
+
+**Solução:** Uma plataforma que coleta, processa e apresenta esses dados de forma visual e interativa, com um assistente de IA capaz de responder perguntas em linguagem natural com base nos dados reais do momento.
+
+---
+
+## 🗂️ Estrutura do Repositório
 
 ```bash
-📂 FIAP-GRAD-ON-IA
+📂 global-solutions-galaxia
 │
-├── 📂 ANO1
-│   ├── 📂 FASE1
-│   │   ├── 📂 NOME-DA-ATIVIDADE1
-│   │   ├── 📂 NOME-DA-ATIVIDADE2
-│   │   ├── 📂 NOME-DA-ATIVIDADE3
-│   ├── 📂 FASE2
-│   ├── 📂 FASE3
-│   └── 📂 ...
+├── 📂 backend
+│   ├── main.py              # API REST com FastAPI
+│   ├── data_collector.py    # Coleta de dados NASA NeoWs
+│   ├── analyzer.py          # Machine Learning (K-Means)
+│   ├── rag.py               # IA Generativa com RAG (Groq / LLaMA)
+│   └── requirements.txt     # Dependências Python
+│  
 │
-├── 📂 ANO2
-│   ├── 📂 FASE1
-│   ├── 📂 FASE2
-│   ├── 📂 FASE3
-│   └── 📂 ...
+├── 📂 astrosight-web
+│   ├── 📂 src
+│   │   ├── App.jsx           # Componente principal
+│   │   ├── index.css         # Estilos globais
+│   │   └── main.jsx          # Entry point React
+│   ├── package.json
+│   └── vite.config.js
 │
 └── README.md
 ```
+
+---
+
+## 🛠️ Tecnologias Utilizadas
+
+| Tecnologia | Versão | Uso |
+|---|---|---|
+| Python | 3.12 | Backend principal |
+| FastAPI | latest | API REST |
+| scikit-learn | latest | K-Means clustering |
+| pandas | latest | Manipulação de dados |
+| Groq API (LLaMA 3.3 70B) | — | IA Generativa gratuita |
+| React | 19 | Frontend SPA |
+| Vite | latest | Build tool |
+| Recharts | latest | Gráficos interativos |
+| NASA NeoWs API | — | Fonte dos dados de asteroides |
+
+---
+
+## ▶️ Como Executar
+
+### Pré-requisitos
+- Python 3.12+
+- Node.js 18+
+- Chaves de API: [NASA](https://api.nasa.gov) e [Groq](https://console.groq.com)
+
+### Backend
+
+```bash
+# Acesse a pasta do backend
+cd backend
+
+# Crie e ative o ambiente virtual
+python -m venv venv
+venv\Scripts\activate        # Windows
+# source venv/bin/activate   # Linux/Mac
+
+# Instale as dependências
+pip install -r requirements.txt
+
+# Configure as variáveis de ambiente
+
+# Inicie o servidor
+uvicorn main:app --reload
+```
+
+O backend estará disponível em `http://localhost:8000`
+
+### Frontend
+
+```bash
+# Acesse a pasta do frontend
+cd astrosight-web
+
+# Instale as dependências
+npm install
+
+# Inicie o servidor de desenvolvimento
+npm run dev
+```
+
+O frontend estará disponível em `http://localhost:5173`
+
+---
+
+## 🔑 Variáveis de Ambiente
+
+Crie um arquivo `.env` dentro da pasta `backend`:
+
+```env
+GROQ_API_KEY=sua_chave_aqui
+```
+
+---
+
+## 🌐 Endpoints da API
+
+| Endpoint | Método | Descrição |
+|---|---|---|
+| `/` | GET | Status da API |
+| `/dados` | GET | NEOs dos últimos 7 dias |
+| `/analise` | GET | Estatísticas + clusters K-Means |
+| `/chat` | POST | Pergunta → resposta IA com RAG |
+
+---
+
+## 🎬 Vídeo de Demonstração
+
+> 📹 [Inserir link do vídeo após gravação]
 
 ---
 
