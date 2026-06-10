@@ -149,7 +149,7 @@ GROQ_API_KEY=sua_chave_aqui
 
 ## 🎬 Vídeo de Demonstração
 
-> 📹 [Inserir link do vídeo após gravação]
+> 📹 [(https://youtu.be/lTwAkssauzQ)]
 
 ---
 
