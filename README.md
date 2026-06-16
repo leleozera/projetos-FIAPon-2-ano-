@@ -51,12 +51,9 @@ O objetivo geral dessa atividade é construir um protótipo de Assistente Cardio
 
 ```
 
-É só copiar no `README.md` também — o GitHub renderiza os emojis e a estrutura de árvore normalmente. 😊
-## 🔧 Como executar o código
-
 ---
 
-## 🚀 Como Rodar no Google Colab (parte 1)
+## 🔧 Como executar o código (Parte 1)
 
 1. Faça o upload do arquivo `parte1_medmnist.ipynb` no [Google Colab](https://colab.research.google.com/)
 2. Execute a primeira célula para instalar as dependências automaticamente
