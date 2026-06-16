@@ -57,8 +57,20 @@ Dentre os arquivos e pastas presentes na raiz do projeto, definem-se:
 
 ## 🔧 Como executar o código
 
-*Acrescentar as informações necessárias sobre pré-requisitos (IDEs, serviços, bibliotecas etc.) e instalação básica do projeto, descrevendo eventuais versões utilizadas. Colocar um passo a passo de como o leitor pode baixar o seu código e executá-lo a partir de sua máquina ou seu repositório. Considere a explicação organizada em fase.*
+Parte 1:
 
+---
+
+## 🚀 Como Rodar no Google Colab
+
+1. Faça o upload do arquivo `parte1_medmnist.ipynb` no [Google Colab](https://colab.research.google.com/)
+2. Execute a primeira célula para instalar as dependências automaticamente
+3. Rode as células em ordem — o dataset BloodMNIST será baixado automaticamente
+4. Ao final, os arquivos `pipeline_info.json` e os gráficos `.png` serão salvos na sessão do Colab
+
+> **Requisitos:** Conta Google. Nenhuma instalação local necessária.
+
+---
 
 ## 🗃 Histórico de lançamentos
 
