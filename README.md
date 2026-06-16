@@ -57,10 +57,9 @@ Dentre os arquivos e pastas presentes na raiz do projeto, definem-se:
 
 ## 🔧 Como executar o código
 
-Parte 1:
-
 ---
 
+Parte 1:
 ## 🚀 Como Rodar no Google Colab
 
 1. Faça o upload do arquivo `parte1_medmnist.ipynb` no [Google Colab](https://colab.research.google.com/)
