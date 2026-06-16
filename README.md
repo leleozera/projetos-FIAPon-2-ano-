@@ -25,11 +25,11 @@
 
 O objetivo geral dessa atividade é construir um protótipo de Assistente Cardiológico Virtual que atenda os seguintes requisitos:
 
--Realizar o pré-processamento de imagens médicas simuladas (exemplo: ECGs, raios-X ou datasets públicos de saúde, como o <https://www.kaggle.com/datasets/nih-chest-xrays/data>).
+-Realizar o pré-processamento de imagens médicas simuladas (exemplo: ECGs, raios-X ou datasets públicos de saúde). Nós utilizamos o dataset MedMNIST, que é uma coleção com vários subconjuntos (olho, tórax, patologia, dermatologia, etc.), com imagens de muitas classes diferentes. É o mais diverso e completo, com até 18 datasets médicos padronizados em um só pacote.
 
 -Treinar e avaliar modelos de CNN para classificar e identificar padrões em imagens médicas.
 
--Apresentar os resultados de forma acessível em uma aplicação simples, como por exemplo um notebook interativo, uma interface web básica (Flask) ou um app mobile inicial, priorizando clareza e facilidade de interpretação dos resultados obtidos pelo modelo.
+-Apresentar os resultados de forma acessível em uma aplicação simples, como por exemplo um notebook interativo, priorizando clareza e facilidade de interpretação dos resultados obtidos pelo modelo.
 
 -Utilize do trabalho em equipe e da colaboração interdisciplinar — Estimulando habilidades de comunicação, cooperação e divisão equilibrada de tarefas. O trabalho em equipe é considerado uma soft skill essencial para o ambiente profissional e acadêmico.
 
