@@ -23,9 +23,7 @@
 
 ## 📜 Descrição
 
-Objetivo geral dessa atividade:
-
-Construir um protótipo de Assistente Cardiológico Virtual que:
+O objetivo geral dessa atividade é construir um protótipo de Assistente Cardiológico Virtual que:
 
 -Realize o pré-processamento de imagens médicas simuladas (exemplo: ECGs, raios-X ou datasets públicos de saúde, como o <https://www.kaggle.com/datasets/nih-chest-xrays/data>).
 
