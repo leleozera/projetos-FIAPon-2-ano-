@@ -56,8 +56,7 @@ O objetivo geral dessa atividade é construir um protótipo de Assistente Cardio
 
 ---
 
-Parte 1:
-## 🚀 Como Rodar no Google Colab
+## 🚀 Como Rodar no Google Colab (parte 1)
 
 1. Faça o upload do arquivo `parte1_medmnist.ipynb` no [Google Colab](https://colab.research.google.com/)
 2. Execute a primeira célula para instalar as dependências automaticamente
