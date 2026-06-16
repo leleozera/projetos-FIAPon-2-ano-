@@ -23,15 +23,15 @@
 
 ## 📜 Descrição
 
-O objetivo geral dessa atividade é construir um protótipo de Assistente Cardiológico Virtual que:
+O objetivo geral dessa atividade é construir um protótipo de Assistente Cardiológico Virtual que atenda os seguintes requisitos:
 
--Realize o pré-processamento de imagens médicas simuladas (exemplo: ECGs, raios-X ou datasets públicos de saúde, como o <https://www.kaggle.com/datasets/nih-chest-xrays/data>).
+-Realizar o pré-processamento de imagens médicas simuladas (exemplo: ECGs, raios-X ou datasets públicos de saúde, como o <https://www.kaggle.com/datasets/nih-chest-xrays/data>).
 
--Treine e avalie modelos de CNN para classificar e identificar padrões em imagens médicas.
+-Treinar e avaliar modelos de CNN para classificar e identificar padrões em imagens médicas.
 
--Apresente os resultados de forma acessível em uma aplicação simples, como por exemplo um notebook interativo, uma interface web básica (Flask) ou um app mobile inicial, priorizando clareza e facilidade de interpretação dos resultados obtidos pelo modelo.
+-Apresentar os resultados de forma acessível em uma aplicação simples, como por exemplo um notebook interativo, uma interface web básica (Flask) ou um app mobile inicial, priorizando clareza e facilidade de interpretação dos resultados obtidos pelo modelo.
 
--Trabalho em equipe e colaboração interdisciplinar — recomendamos o desenvolvimento do projeto em grupo de 2 a 5 integrantes, estimulando habilidades de comunicação, cooperação e divisão equilibrada de tarefas. O trabalho em equipe é considerado uma soft skill essencial para o ambiente profissional e acadêmico, e será concedido 1 ponto extra para as equipes que se organizarem dentro dessa estrutura recomendada.
+-Utilize do trabalho em equipe e da colaboração interdisciplinar — Estimulando habilidades de comunicação, cooperação e divisão equilibrada de tarefas. O trabalho em equipe é considerado uma soft skill essencial para o ambiente profissional e acadêmico.
 
 
 
