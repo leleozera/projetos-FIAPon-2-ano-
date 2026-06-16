@@ -37,6 +37,7 @@ O objetivo geral dessa atividade é construir um protótipo de Assistente Cardio
 
 ## 📁 Estrutura de pastas
 
+```
 ├── 📁 parte1/
 │   ├── 📓 parte1_medmnist.ipynb       # Notebook principal (Google Colab)
 │   ├── 📄 relatorio_parte1.pdf        # Relatório com documentação do pipeline
@@ -48,6 +49,9 @@ O objetivo geral dessa atividade é construir um protótipo de Assistente Cardio
 │
 └── 📄 README.md                       # Instruções e descrição do projeto
 
+```
+
+É só copiar no `README.md` também — o GitHub renderiza os emojis e a estrutura de árvore normalmente. 😊
 ## 🔧 Como executar o código
 
 ---
