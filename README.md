@@ -73,7 +73,17 @@ O objetivo geral dessa atividade é construir um protótipo de Assistente Cardio
 
 > **Requisitos:** Conta Google. Nenhuma instalação local necessária.
 
----
+## 🔧 Como executar o código (Parte 2)
+
+1. Faça o upload do arquivo parte2_cnn_classificacao.ipynb no Google Colab
+2. Execute a primeira célula para instalar as dependências automaticamente
+3. Rode as células em ordem — o pipeline da Parte 1 é reconstruído automaticamente (download do BloodMNIST, normalização e augmentação)
+4. As células seguintes treinam a CNN do zero e o modelo de Transfer Learning (ResNet18), nessa ordem
+5. Ao final, são exibidos as métricas de avaliação (acurácia, precisão, recall, F1-score), as matrizes de confusão de cada modelo, o gráfico comparativo entre as duas abordagens e o protótipo de visualização das predições
+
+
+> **Requisitos:** Conta Google. Recomenda-se ativar GPU em Ambiente de execução → Alterar tipo de ambiente de execução → GPU, para acelerar o treinamento.
+
 
 ## 🗃 Histórico de lançamentos
 
