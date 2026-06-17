@@ -39,25 +39,20 @@ O objetivo geral dessa atividade é construir um protótipo de Assistente Cardio
 
 ```
 
-📁 processamento-imagens-medicas/
+├── 📁 Parte1/
+│   ├── 📓 Cap_1_Visão_Computacional_na_Clínica_(parte1).ipynb     # Notebook principal (Google Colab) - pré-processamento
+│   └── 📄 Cap 1 - Visão Computacional na Clínica (relatório).pdf  # Relatório com documentação do pipeline
 │
-├── 📁 .config/                         # Configurações do ambiente Colab
+├── 📁 Parte 2/
+│   ├── 📓 Cap_1_Visao_Computacional_na_Clinica_parte2.ipynb       # Notebook principal (Google Colab) - CNN do zero e Transfer Learning
+│   └── 📁 Prints/                                                 # Capturas de tela das métricas e resultados
+│       ├── 🖼️ Screenshot_1.png
+│       ├── 🖼️ Screenshot_2.png
+│       ├── 🖼️ Screenshot_3.png
+│       ├── 🖼️ Screenshot_4.png
+│       └── 🖼️ Screenshot_5.png
 │
-├── 📁 data/
-│   └── 📦 bloodmnist.npz               # Dataset BloodMNIST baixado automaticamente
-│
-├── 📁 sample_data/                      # Dados de exemplo padrão do Colab
-│   ├── 📄 README.md
-│   ├── anscombe.json
-│   ├── california_housing_test.csv
-│   ├── california_housing_train.csv
-│   ├── mnist_test.csv
-│   └── mnist_train_small.csv
-│
-├── 🖼️ amostras_brutas.png              # Visualização das amostras originais
-├── 🖼️ antes_depois.png                 # Comparação pré/pós processamento
-├── 🖼️ distribuicao_classes.png         # Gráfico de distribuição por classe
-└── 📋 pipeline_info.json               # Parâmetros de normalização salvos
+└── 📄 README.md                                                    # Instruções e descrição do projeto
 
 ```
 
