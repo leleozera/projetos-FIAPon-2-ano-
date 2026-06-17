@@ -38,16 +38,30 @@ O objetivo geral dessa atividade é construir um protótipo de Assistente Cardio
 ## 📁 Estrutura de pastas
 
 ```
-├── 📁 parte1/
-│   ├── 📓 parte1_medmnist.ipynb       # Notebook principal (Google Colab)
-│   ├── 📄 relatorio_parte1.pdf        # Relatório com documentação do pipeline
-│   └── 📁 outputs/
-│       ├── 🖼️ amostras_brutas.png     # Visualização das amostras originais
-│       ├── 🖼️ antes_depois.png        # Comparação pré/pós processamento
-│       ├── 🖼️ distribuicao_classes.png # Gráfico de distribuição por classe
-│       └── 📋 pipeline_info.json      # Parâmetros de normalização salvos
+
+📁 processamento-imagens-medicas/
 │
-└── 📄 README.md                       # Instruções e descrição do projeto
+├── 📁 .config/                         # Configurações do ambiente Colab
+│
+├── 📁 data/
+│   └── 📦 bloodmnist.npz               # Dataset BloodMNIST baixado automaticamente
+│
+├── 📁 sample_data/                      # Dados de exemplo padrão do Colab
+│   ├── 📄 README.md
+│   ├── anscombe.json
+│   ├── california_housing_test.csv
+│   ├── california_housing_train.csv
+│   ├── mnist_test.csv
+│   └── mnist_train_small.csv
+│
+├── 🖼️ amostras_brutas.png              # Visualização das amostras originais
+├── 🖼️ antes_depois.png                 # Comparação pré/pós processamento
+├── 🖼️ distribuicao_classes.png         # Gráfico de distribuição por classe
+└── 📋 pipeline_info.json               # Parâmetros de normalização salvos
+
+```
+
+> **Nota:** A pasta `.config` e `sample_data` são geradas automaticamente pelo Google Colab e podem ser ignoradas no `.gitignore`.
 
 ```
 
