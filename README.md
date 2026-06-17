@@ -63,9 +63,6 @@ O objetivo geral dessa atividade é construir um protótipo de Assistente Cardio
 
 > **Nota:** A pasta `.config` e `sample_data` são geradas automaticamente pelo Google Colab e podem ser ignoradas no `.gitignore`.
 
-```
-
----
 
 ## 🔧 Como executar o código (Parte 1)
 
