@@ -109,7 +109,7 @@ Basta abrir `frontend/index.html` no navegador (ou servir com qualquer servidor 
 
 https://youtu.be/Tio_-t0T52k
 
-    *
+    
 
 ## 📋 Licença
 
