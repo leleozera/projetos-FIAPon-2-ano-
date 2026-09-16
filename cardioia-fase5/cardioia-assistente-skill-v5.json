@@ -1,0 +1,500 @@
+{
+  "name": "CardioIA - Assistente Cardiológico",
+  "description": "Skill do Watson Assistant para atendimento inicial em saúde cardiológica: saudação, triagem básica de sintomas, orientação geral e encaminhamento para atendimento médico.",
+  "language": "pt-br",
+  "workspace_id": "cardioia-fase5-skill",
+  "dialog_nodes": [
+    {
+      "dialog_node": "node_followup_sintoma_v2",
+      "type": "standard",
+      "conditions": "$aguardando_detalhe_sintoma",
+      "output": {
+        "generic": [
+          {
+            "response_type": "text",
+            "values": [
+              {
+                "text": "Entendido, obrigado por detalhar. Anotei essas informações. Se o sintoma persistir, piorar ou vier acompanhado de outros sinais (falta de ar intensa, desmaio, dor irradiando pro braço), procure atendimento médico o quanto antes. Posso ajudar com mais alguma coisa?"
+              }
+            ],
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "context": {
+        "aguardando_detalhe_sintoma": null
+      }
+    },
+    {
+      "dialog_node": "node_boas_vindas_v2",
+      "type": "standard",
+      "conditions": "welcome",
+      "output": {
+        "generic": [
+          {
+            "response_type": "text",
+            "values": [
+              {
+                "text": "Olá! Eu sou o assistente virtual do CardioIA. Posso te ajudar a entender melhor sintomas cardiológicos e orientar os próximos passos. Importante: eu não substituo uma consulta médica. Como posso ajudar?"
+              }
+            ],
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "previous_sibling": "node_followup_sintoma_v2"
+    },
+    {
+      "dialog_node": "node_saudacao_v2",
+      "type": "standard",
+      "conditions": "#Saudacao",
+      "output": {
+        "generic": [
+          {
+            "response_type": "text",
+            "values": [
+              {
+                "text": "Oi! Como você está se sentindo hoje?"
+              }
+            ],
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "previous_sibling": "node_boas_vindas_v2"
+    },
+    {
+      "dialog_node": "node_relatar_sintoma_v2",
+      "type": "standard",
+      "conditions": "#Relatar_Sintoma",
+      "output": {
+        "generic": [
+          {
+            "response_type": "text",
+            "values": [
+              {
+                "text": "Entendi que você está relatando um sintoma cardíaco. Há quanto tempo isso está acontecendo, e a intensidade é leve, moderada ou forte?"
+              }
+            ],
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "context": {
+        "sintoma_relatado": "@sintoma",
+        "urgencia_relatada": "@urgencia",
+        "aguardando_detalhe_sintoma": true
+      },
+      "previous_sibling": "node_saudacao_v2"
+    },
+    {
+      "dialog_node": "node_sintoma_emergencia_v2",
+      "type": "standard",
+      "conditions": "#Relatar_Sintoma && @urgencia:alta",
+      "parent": "node_relatar_sintoma_v2",
+      "output": {
+        "generic": [
+          {
+            "response_type": "text",
+            "values": [
+              {
+                "text": "Isso pode ser sério. Procure atendimento médico de emergência imediatamente (pronto-socorro ou SAMU 192). Não vou conseguir avaliar isso com segurança por aqui."
+              }
+            ],
+            "selection_policy": "sequential"
+          }
+        ]
+      }
+    },
+    {
+      "dialog_node": "node_info_condicao_v2",
+      "type": "standard",
+      "conditions": "#Info_Condicao",
+      "output": {
+        "generic": [
+          {
+            "response_type": "text",
+            "values": [
+              {
+                "text": "Posso explicar de forma geral sobre condições cardiológicas comuns, mas qualquer diagnóstico precisa ser confirmado por um cardiologista. Sobre qual condição você quer saber mais?"
+              }
+            ],
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "previous_sibling": "node_relatar_sintoma_v2"
+    },
+    {
+      "dialog_node": "node_orientacao_consulta_v2",
+      "type": "standard",
+      "conditions": "#Orientacao_Consulta",
+      "output": {
+        "generic": [
+          {
+            "response_type": "text",
+            "values": [
+              {
+                "text": "Recomendo agendar uma consulta com um cardiologista para avaliação presencial. Quer que eu explique quais informações levar para a consulta (histórico de sintomas, exames anteriores, medicações em uso)?"
+              }
+            ],
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "previous_sibling": "node_info_condicao_v2"
+    },
+    {
+      "dialog_node": "node_despedida_v2",
+      "type": "standard",
+      "conditions": "#Despedida",
+      "output": {
+        "generic": [
+          {
+            "response_type": "text",
+            "values": [
+              {
+                "text": "Fico à disposição. Cuide-se e, diante de qualquer sintoma forte, procure atendimento médico. Até logo!"
+              }
+            ],
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "previous_sibling": "node_orientacao_consulta_v2"
+    },
+    {
+      "dialog_node": "node_fallback_v2",
+      "type": "standard",
+      "conditions": "anything_else",
+      "output": {
+        "generic": [
+          {
+            "response_type": "text",
+            "values": [
+              {
+                "text": "Desculpe, não entendi bem. Você pode descrever o sintoma que está sentindo ou perguntar sobre alguma condição cardiológica?"
+              }
+            ],
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "previous_sibling": "node_despedida_v2"
+    },
+    {
+      "dialog_node": "node_arritmia_v2",
+      "type": "standard",
+      "conditions": "@condicao:arritmia",
+      "parent": "node_info_condicao_v2",
+      "output": {
+        "generic": [
+          {
+            "response_type": "text",
+            "values": [
+              {
+                "text": "Arritmia é quando o coração bate de forma irregular, mais rápido ou mais devagar que o normal. Pode ser leve e passageira ou indicar algo que precisa de avaliação médica, dependendo da frequência e dos sintomas associados. Quer saber sobre outra condição, ou já posso te orientar sobre agendar uma consulta?"
+              }
+            ],
+            "selection_policy": "sequential"
+          }
+        ]
+      }
+    },
+    {
+      "dialog_node": "node_hipertensao_v2",
+      "type": "standard",
+      "conditions": "@condicao:hipertensao",
+      "parent": "node_info_condicao_v2",
+      "output": {
+        "generic": [
+          {
+            "response_type": "text",
+            "values": [
+              {
+                "text": "Hipertensão (pressão alta) é quando a força do sangue contra as paredes das artérias fica constantemente elevada. Se não tratada, pode sobrecarregar o coração e aumentar o risco de complicações cardiovasculares. Quer saber sobre outra condição, ou já posso te orientar sobre agendar uma consulta?"
+              }
+            ],
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "previous_sibling": "node_arritmia_v2"
+    },
+    {
+      "dialog_node": "node_infarto_v2",
+      "type": "standard",
+      "conditions": "@condicao:infarto",
+      "parent": "node_info_condicao_v2",
+      "output": {
+        "generic": [
+          {
+            "response_type": "text",
+            "values": [
+              {
+                "text": "O infarto (ataque cardíaco) acontece quando o fluxo de sangue para uma parte do coração é interrompido, geralmente por um bloqueio numa artéria, causando dano ao músculo cardíaco. É uma emergência médica. Quer saber sobre outra condição, ou já posso te orientar sobre agendar uma consulta?"
+              }
+            ],
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "previous_sibling": "node_hipertensao_v2"
+    },
+    {
+      "dialog_node": "node_insuficiencia_cardiaca_v2",
+      "type": "standard",
+      "conditions": "@condicao:insuficiencia_cardiaca",
+      "parent": "node_info_condicao_v2",
+      "output": {
+        "generic": [
+          {
+            "response_type": "text",
+            "values": [
+              {
+                "text": "Insuficiência cardíaca é quando o coração não consegue bombear sangue de forma eficiente para atender às necessidades do corpo. Pode causar cansaço, falta de ar e inchaço, e geralmente exige acompanhamento médico contínuo. Quer saber sobre outra condição, ou já posso te orientar sobre agendar uma consulta?"
+              }
+            ],
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "previous_sibling": "node_infarto_v2"
+    }
+  ],
+  "counterexamples": [
+    {
+      "text": "Qual é a capital da França?"
+    },
+    {
+      "text": "Me conte uma piada"
+    }
+  ],
+  "entities": [
+    {
+      "entity": "sintoma",
+      "values": [
+        {
+          "value": "dor no peito",
+          "synonyms": [
+            "dor no peito",
+            "aperto no peito",
+            "peito doendo"
+          ]
+        },
+        {
+          "value": "falta de ar",
+          "synonyms": [
+            "falta de ar",
+            "dificuldade para respirar",
+            "cansaço para respirar"
+          ]
+        },
+        {
+          "value": "palpitação",
+          "synonyms": [
+            "palpitação",
+            "coração acelerado",
+            "coração disparado"
+          ]
+        },
+        {
+          "value": "tontura",
+          "synonyms": [
+            "tontura",
+            "tonteira",
+            "vertigem"
+          ]
+        },
+        {
+          "value": "cansaço",
+          "synonyms": [
+            "cansaço",
+            "fadiga",
+            "sem energia"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "urgencia",
+      "values": [
+        {
+          "value": "alta",
+          "synonyms": [
+            "forte",
+            "intensa",
+            "muito forte",
+            "insuportável"
+          ]
+        },
+        {
+          "value": "moderada",
+          "synonyms": [
+            "moderada",
+            "média",
+            "considerável"
+          ]
+        },
+        {
+          "value": "baixa",
+          "synonyms": [
+            "leve",
+            "fraca",
+            "baixa"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "condicao",
+      "values": [
+        {
+          "value": "arritmia",
+          "synonyms": [
+            "arritmia",
+            "arritmia cardiaca",
+            "coração irregular"
+          ]
+        },
+        {
+          "value": "hipertensao",
+          "synonyms": [
+            "hipertensão",
+            "hipertensao",
+            "pressão alta",
+            "pressao alta"
+          ]
+        },
+        {
+          "value": "infarto",
+          "synonyms": [
+            "infarto",
+            "ataque cardíaco",
+            "ataque cardiaco",
+            "infarto do miocárdio"
+          ]
+        },
+        {
+          "value": "insuficiencia_cardiaca",
+          "synonyms": [
+            "insuficiência cardíaca",
+            "insuficiencia cardiaca",
+            "coração fraco"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    }
+  ],
+  "intents": [
+    {
+      "intent": "Saudacao",
+      "examples": [
+        {
+          "text": "Oi"
+        },
+        {
+          "text": "Olá"
+        },
+        {
+          "text": "Bom dia"
+        },
+        {
+          "text": "Boa tarde"
+        },
+        {
+          "text": "Tudo bem?"
+        }
+      ]
+    },
+    {
+      "intent": "Relatar_Sintoma",
+      "examples": [
+        {
+          "text": "Estou com dor no peito"
+        },
+        {
+          "text": "Sinto falta de ar quando subo escadas"
+        },
+        {
+          "text": "Meu coração está acelerado"
+        },
+        {
+          "text": "Estou com tontura desde ontem"
+        },
+        {
+          "text": "Sinto muito cansaço ultimamente"
+        },
+        {
+          "text": "Tenho sentido palpitação forte"
+        }
+      ]
+    },
+    {
+      "intent": "Info_Condicao",
+      "examples": [
+        {
+          "text": "O que é arritmia?"
+        },
+        {
+          "text": "Me explica o que é hipertensão"
+        },
+        {
+          "text": "O que causa infarto?"
+        },
+        {
+          "text": "Quero entender sobre insuficiência cardíaca"
+        }
+      ]
+    },
+    {
+      "intent": "Orientacao_Consulta",
+      "examples": [
+        {
+          "text": "Preciso marcar uma consulta?"
+        },
+        {
+          "text": "Devo procurar um cardiologista?"
+        },
+        {
+          "text": "Como faço para ser atendido?"
+        },
+        {
+          "text": "Quero agendar uma avaliação"
+        }
+      ]
+    },
+    {
+      "intent": "Despedida",
+      "examples": [
+        {
+          "text": "Tchau"
+        },
+        {
+          "text": "Até mais"
+        },
+        {
+          "text": "Obrigado, era só isso"
+        },
+        {
+          "text": "Pode encerrar"
+        }
+      ]
+    }
+  ],
+  "system_settings": {
+    "off_topic": {
+      "enabled": false
+    },
+    "disambiguation": {
+      "enabled": true,
+      "sensitivity": "auto"
+    },
+    "human_agent_assist": {
+      "prompt_field": ""
+    }
+  }
+}

@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CardioIA - Assistente Cardiológico</title>
+<style>
+  :root {
+    --primary: #c0392b;
+    --primary-dark: #922b21;
+    --bg: #f4f6f7;
+    --bubble-user: #2980b9;
+    --bubble-bot: #ffffff;
+    --text-dark: #2c3e50;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: var(--bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  .chat-app {
+    width: 420px;
+    max-width: 95vw;
+    height: 640px;
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  header {
+    background: var(--primary);
+    color: #fff;
+    padding: 16px 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  header .icon { font-size: 22px; }
+  header h1 { font-size: 16px; margin: 0; }
+  header p { font-size: 12px; margin: 2px 0 0; opacity: 0.85; }
+
+  .messages {
+    flex: 1;
+    padding: 16px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background: var(--bg);
+  }
+  .bubble {
+    max-width: 78%;
+    padding: 10px 14px;
+    border-radius: 14px;
+    font-size: 14px;
+    line-height: 1.4;
+    white-space: pre-wrap;
+  }
+  .bubble.bot {
+    background: var(--bubble-bot);
+    color: var(--text-dark);
+    align-self: flex-start;
+    border-bottom-left-radius: 2px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+  }
+  .bubble.user {
+    background: var(--bubble-user);
+    color: #fff;
+    align-self: flex-end;
+    border-bottom-right-radius: 2px;
+  }
+  .bubble.disclaimer {
+    align-self: center;
+    background: #fdebd0;
+    color: #7e5109;
+    font-size: 11px;
+    text-align: center;
+    max-width: 90%;
+  }
+
+  form {
+    display: flex;
+    border-top: 1px solid #e0e0e0;
+    padding: 10px;
+    gap: 8px;
+    background: #fff;
+  }
+  input[type=text] {
+    flex: 1;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    padding: 10px 16px;
+    font-size: 14px;
+    outline: none;
+  }
+  input[type=text]:focus { border-color: var(--primary); }
+  button {
+    background: var(--primary);
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    padding: 0 18px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  button:hover { background: var(--primary-dark); }
+  button:disabled { opacity: 0.6; cursor: not-allowed; }
+
+  .typing {
+    align-self: flex-start;
+    font-size: 12px;
+    color: #888;
+    padding-left: 4px;
+  }
+</style>
+</head>
+<body>
+
+<div class="chat-app">
+  <header>
+    <span class="icon">❤️</span>
+    <div>
+      <h1>CardioIA</h1>
+      <p>Assistente Cardiológico Conversacional</p>
+    </div>
+  </header>
+
+  <div class="messages" id="messages">
+    <div class="bubble disclaimer">
+      Este assistente oferece orientação geral e não substitui uma consulta médica.
+    </div>
+  </div>
+
+  <form id="chat-form">
+    <input type="text" id="input" placeholder="Digite sua mensagem..." autocomplete="off" required />
+    <button type="submit" id="send-btn">Enviar</button>
+  </form>
+</div>
+
+<script>
+  // Ajuste para a URL do backend Flask (local ou implantado)
+  const API_BASE_URL = "http://localhost:5000";
+
+  const messagesEl = document.getElementById("messages");
+  const formEl = document.getElementById("chat-form");
+  const inputEl = document.getElementById("input");
+  const sendBtn = document.getElementById("send-btn");
+
+  let sessionId = null;
+
+  function addBubble(text, sender) {
+    const bubble = document.createElement("div");
+    bubble.className = `bubble ${sender}`;
+    bubble.textContent = text;
+    messagesEl.appendChild(bubble);
+    messagesEl.scrollTop = messagesEl.scrollHeight;
+  }
+
+  function setTyping(show) {
+    let typingEl = document.getElementById("typing-indicator");
+    if (show && !typingEl) {
+      typingEl = document.createElement("div");
+      typingEl.id = "typing-indicator";
+      typingEl.className = "typing";
+      typingEl.textContent = "CardioIA está digitando...";
+      messagesEl.appendChild(typingEl);
+      messagesEl.scrollTop = messagesEl.scrollHeight;
+    } else if (!show && typingEl) {
+      typingEl.remove();
+    }
+  }
+
+  async function ensureSession() {
+    if (sessionId) return sessionId;
+    const res = await fetch(`${API_BASE_URL}/session`, { method: "POST" });
+    const data = await res.json();
+    sessionId = data.session_id;
+    return sessionId;
+  }
+
+  async function sendMessage(text) {
+    await ensureSession();
+    setTyping(true);
+    sendBtn.disabled = true;
+
+    try {
+      const res = await fetch(`${API_BASE_URL}/chat`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ session_id: sessionId, message: text }),
+      });
+      const data = await res.json();
+      setTyping(false);
+
+      if (!res.ok) {
+        addBubble(data.error || "Ocorreu um erro ao falar com o assistente.", "bot");
+        return;
+      }
+      data.replies.forEach((reply) => addBubble(reply, "bot"));
+    } catch (err) {
+      setTyping(false);
+      addBubble("Não foi possível conectar ao backend. Verifique se ele está rodando.", "bot");
+    } finally {
+      sendBtn.disabled = false;
+    }
+  }
+
+  formEl.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const text = inputEl.value.trim();
+    if (!text) return;
+    addBubble(text, "user");
+    inputEl.value = "";
+    sendMessage(text);
+  });
+
+  // Mensagem inicial simulando o nó de boas-vindas do Watson
+  window.addEventListener("load", () => {
+    addBubble(
+      "Olá! Eu sou o assistente virtual do CardioIA. Como posso te ajudar hoje?",
+      "bot"
+    );
+  });
+</script>
+
+</body>
+</html>
